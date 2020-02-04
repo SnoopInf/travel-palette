@@ -1,0 +1,15 @@
+---
+layout: palette
+title: "Elephant"
+date: "2020-02-02 16:41:43 +0200"
+section: "elephant"
+class: "tm-section-pad-top"
+image_url: "img/elephant.jpg"
+description: "This is a cool palette from picture with elephant."
+colors:
+  - hex: "#BE8861"
+  - hex: "#443C38"
+  - hex: "#7E9653"
+  - hex: "#5C6A6C"
+  - hex: "#A37460"
+---

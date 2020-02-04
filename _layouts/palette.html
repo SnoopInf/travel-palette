@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div class="container container-narrow">
+  <div class="row">
+    <div class="text-center col-12">
+        <h2 class="tm-text-primary tm-section-title mb-4">{{ page.title }}</h2>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-4">
+        <figure class="palette-img-item-v">
+          <img src="{{ page.image_url }}" alt="Image" class="img-fluid mx-auto">
+          <blockquote>This background image includes a semi-transparent overlay layer. This section also has a parallax image effect.</blockquote>
+          <figcaption>
+            <h2><i>Physical Health <span>Exercise!</span></i></h2>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-4 palette-container">
+          {% for color in page.colors %}
+          <div class="palette-item">
+            <div class="color-item" style="background-color: {{ color.hex }}"></div>
+            <div class="color-title">{{ color.hex }}</div>
+          </div>
+          {% endfor %}
+      </div>
+      <div class="col-4 description-container">
+        <p class="mx-auto tm-section-desc">
+          {{ page.description }}
+        </p>
+      </div>
+    </div>
+</div>
