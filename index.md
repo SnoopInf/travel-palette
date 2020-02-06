@@ -58,28 +58,42 @@ title: Blog
     <!-- <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
     <p>{{ post.date | date_to_string }} - {{ post.author }}</p> -->
     <div class="container container-narrow">
+    <div class="card post-card">
       <div class="row">
-        <div class="text-center col-12">
+        <div class="col-12">
             <h2 class="tm-text-primary tm-section-title mb-4">{{ post.title }}</h2>
         </div>
       </div>
       <div class="row">
-          <div class="col-4">
-            <figure class="palette-img-item-v">
-              <img src="{{ post.image_url }}" alt="Image" class="img-fluid mx-auto">
-              <blockquote>This background image includes a semi-transparent overlay layer. This section also has a parallax image effect.</blockquote>
-              <figcaption>
-                <h2><i>Physical Health <span>Exercise!</span></i></h2>
-              </figcaption>
-            </figure>
+          <div class="col-6">
+          <div class="palette-img-v">
+            <img src="{{ post.image_url }}" alt="Image" class="palette-img-item-v img-fluid mx-auto">
+            <div class="palette-item-h">
+              {% for color in post.colors %}
+              <div class="color-item-h" style="background-color: {{ color.hex }}"></div>
+              {% endfor %}
+            </div>
           </div>
-          <div class="col-8 palette-container">
-            <p class="mx-auto tm-section-desc">
-              {{ post.description }}
-            </p>
+          <div class="colors-strip">
+          {% for color in post.colors %}
+            <div class="colors-strip-item card">
+              <div class="colors-strip-item-palette" style="background-color: {{ color.hex }}"></div>
+              <div class="colors-strip-item-text">{{ color.hex }}</div>
+            </div>
+          {% endfor %}
+          </div>
+          </div>
+          <div class="col-6">
+            <div class="card post-card">
+              <p class="mx-auto tm-section-desc">
+                {{ post.description }}
+              </p>
+            </div>
+          </div>
+          <!-- <div class="col-8 palette-container">
             <div class="palette-item-v">
             {% for color in post.colors %}
-              <div class="color-item-v" style="background-color: {{ color.hex }}"></div>
+            <div class="color-item-v" style="background-color: {{ color.hex }}"></div>
             {% endfor %}
             </div>
             <div class="colors-strip">
@@ -87,7 +101,13 @@ title: Blog
                 {{ post.colors | map: "hex" | join: "•" }}
               </span>
             </div>
-          </div>
+            <div class="card post-card">
+              <p class="mx-auto tm-section-desc">
+                {{ post.description }}
+              </p>
+            </div>
+          </div> -->
+        </div>
         </div>
     </div>
   </section>
