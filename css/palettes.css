@@ -146,10 +146,10 @@ blockquote {
 
 #infinite {
 	background-color: #222;
-  background-image: url(/img/infinite-loop-01.jpg);
+  background-image: url(/img/bg1.jpg);
   background-repeat: no-repeat;
   height: 100vh;
-  min-height: 375px;
+  min-height: 301px;
   position: relative;
 }
 
@@ -698,14 +698,22 @@ p {
   }
 }
 
-.palette-img-v {
+.palette-img-v, .palette-img-h {
 	display: flex;
 	width: 400px;
 	height: 400px;
 }
 
+.palette-img-h {
+		flex-direction: column;
+}
+
 .palette-img-item-v {
 	height: 100%;
+}
+
+.palette-img-item-h {
+	width: 100%;
 }
 
 .container-narrow {
@@ -713,7 +721,7 @@ p {
 }
 
 .post-card {
-	padding: 0 10px 0 10px;
+	padding: 10px;
 }
 
 .palette-item {
@@ -731,13 +739,19 @@ p {
 }
 
 .palette-item-v {
+	margin-top: 10px;
 	display: flex;
+	width: 100%;
+	flex: 1;
 }
 
 .color-item-v {
-	width: 19%;
-	height: 300px;
-	display: inline-block;
+	flex: 1;
+	margin-right: 10px;
+}
+
+.color-item-v:last-child {
+	margin-right: 0px;
 }
 
 .palette-item-h {

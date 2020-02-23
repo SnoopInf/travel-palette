@@ -5,7 +5,9 @@ date: "2020-02-02 16:41:43 +0200"
 section: "elephant"
 class: "tm-section-pad-top"
 image_url: "img/elephant.jpg"
+image_orientation: vertical
 description: "This is a cool palette from picture with elephant."
+tags: ["sri-lanka", "animal", "brown"]
 colors:
   - hex: "#BE8861"
   - hex: "#443C38"

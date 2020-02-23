@@ -1,0 +1,17 @@
+---
+layout: palette
+title: "mushroom"
+date: "2020-02-23 18:09:31 +0200"
+section: "elephant"
+class: "tm-section-pad-top"
+image_url: "img/mushroom.jpg"
+image_orientation: horizontal
+description: "This is a cool palette from picture with mushroom."
+tags: ["sri-lanka", "mushroom", "brown"]
+colors:
+  - hex: "#431B0C"
+  - hex: "#1E4725"
+  - hex: "#E9F3F3"
+  - hex: "#9C6F35"
+  - hex: "#1E1E20"
+---
